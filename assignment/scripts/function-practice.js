@@ -19,7 +19,7 @@ function helloName(name) {
   return `Hello, ${name}!`;
 }
 // Remember to call the function to test
-console.log(helloName('Jo'));
+console.log(helloName("Jo"));
 
 // 3. Function to add two numbers together & return the result
 
@@ -64,14 +64,24 @@ function getLast(array) {
     return undefined;
   }
 }
-let list = ['A','B', 'C']
+let list = ["A", "B", "C"];
 let result = getLast(list);
 console.log(result);
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find(value, array) {}
-
+function find(value, array) {
+  console.log(`the array ${array}`);
+  for (i = 0; i < array.length; i++) {
+    if (i === value) {
+      return true;
+    }
+  }
+  return false;
+}
+let points = ["ten", "nine", "eight", "seven", "six", "five"];
+let resultList = find(points, "nine");
+console.log(resultList);
 // ----------------------
 // Stretch Goals
 // ----------------------
